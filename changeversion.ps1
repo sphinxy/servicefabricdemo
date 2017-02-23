@@ -1,0 +1,2 @@
+Connect-ServiceFabricCluster -ConnectionEndpoint "sphinxy.westeurope.cloudapp.azure.com:19000"
+Start-ServiceFabricApplicationUpgrade -ApplicationName fabric:/FabricDemo -ApplicationTypeVersion "2.1.0" -FailureAction Rollback -Monitored -ApplicationParameter  @{ "DiceRollHistory_InstanceCount" = "2";"WebApiDice_InstanceCount" = "1"; "WebApiTime_InstanceCount" = "1";}
